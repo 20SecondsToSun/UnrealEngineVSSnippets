@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ueNativeEvent</Title>
+    <Author>20secondstosun</Author>
+    <Shortcut>ueNativeEvent</Shortcut>
+    <Description>description</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <Default>value</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="cpp">
+    <![CDATA[
+UFUNCTION(BlueprintNativeEvent, Category = "Core")
+    void SomeEventName(float SomeParam);
+  void SomeEventName_Implementation(float SomeParam);
+]]>   
+    </Code>
+  </Snippet>
+</CodeSnippet>

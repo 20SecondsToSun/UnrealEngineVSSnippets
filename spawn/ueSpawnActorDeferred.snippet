@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ueSpawnActorDeferred</Title>
+    <Author>20secondstosun</Author>
+    <Shortcut>ueSpawnActorDeferred</Shortcut>
+    <Description>description</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <Default>value</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="cpp">
+    <![CDATA[
+auto SpawnActor = GetWorld()->SpawnActorDeferred<ASpawnActor>(SpawnActorClass, FTransform());
+	//SpawnActor->Setup(...);
+	SpawnActor->FinishSpawning(FTransform());
+]]>   
+    </Code>
+  </Snippet>
+</CodeSnippet>
