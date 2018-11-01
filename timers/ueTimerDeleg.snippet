@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ueTimerDeleg</Title>
+    <Author>20secondstosun</Author>
+    <Shortcut>ueTimerDeleg</Shortcut>
+    <Description>description</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <Default>value</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="cpp">
+    <![CDATA[
+	FTimerDelegate TimerDel;
+	FTimerHandle TimerHandle;
+	int32 MyInt = 10;
+	//TimerDel.BindUFunction(this, FName("MyFunction"), MyInt);
+	TimerDel.BindUObject(this, &AMyClass::MyFunction, MyInt);
+	GetWorldTimerManager().SetTimer(TimerHandle, TimerDel, 2.f, false);
+]]>   
+    </Code>
+  </Snippet>
+</CodeSnippet>

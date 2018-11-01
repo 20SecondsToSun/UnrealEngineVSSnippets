@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ueTimer</Title>
+    <Author>20secondstosun</Author>
+    <Shortcut>ueTimer</Shortcut>
+    <Description>description</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <Default>value</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="cpp">
+    <![CDATA[
+	FTimerHandle MyTimerHandle;
+	GetWorld()->GetTimerManager().SetTimer(MyTimerHandle, this, &AMyClass::OnTimerComplete, 2.0f, false);
+]]>   
+    </Code>
+  </Snippet>
+</CodeSnippet>

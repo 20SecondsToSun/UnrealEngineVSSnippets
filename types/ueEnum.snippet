@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ueEnum</Title>
+    <Author>20secondstosun</Author>
+    <Shortcut>ueEnum</Shortcut>
+    <Description>description</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <Default>value</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="cpp">
+    <![CDATA[
+UENUM(BlueprintType)
+enum class EMyEnum : uint8
+{
+	MyVar UMETA(DisplayName="DisplayName")
+};
+]]>   
+    </Code>
+  </Snippet>
+</CodeSnippet>
