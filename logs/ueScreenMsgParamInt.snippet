@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ueScreenMsgParamInt</Title>
+    <Author>20secondstosun</Author>
+    <Shortcut>ueScreenMsgParamInt</Shortcut>
+    <Description>description</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <Default>value</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="cpp">
+     <![CDATA[
+   if(GEngine)
+   {
+      int32 x = 10;
+      GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Some variable values: x: %d"), x));
+   }
+  ]]>  
+    </Code>
+  </Snippet>
+</CodeSnippet>
