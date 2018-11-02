@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <Header>
-    <Title>ueLineTrace</Title>
+    <Title>ueLineTraceSingleChannelDebug</Title>
     <Author>20secondstosun</Author>
-    <Shortcut>ueLineTrace</Shortcut>
+    <Shortcut>ueLineTraceSingleChannelDebug</Shortcut>
     <Description>description</Description>
     <SnippetTypes>
       <SnippetType>SurroundsWith</SnippetType>
@@ -19,7 +19,26 @@
     </Declarations>
     <Code Language="cpp">
     <![CDATA[
- GetWorld()->LineTraceSingle(...)
+  UWorld* const World = GetWorld();
+
+	if (World)
+	{
+		FCollisionQueryParams QueryParams;
+		const FName TraceTag("TraceTag");
+		World->DebugDrawTraceTag = TraceTag;
+		QueryParams.TraceTag = TraceTag;
+
+		FVector StartLocation = FVector::ZeroVector;
+		FVector EndLocation = FVector::ZeroVector;
+		FHitResult HitResult;
+
+		bool WasHit = GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECollisionChannel::ECC_Visibility, QueryParams);
+
+		if (WasHit)
+		{
+
+		}
+	}
 ]]>   
     </Code>
   </Snippet>

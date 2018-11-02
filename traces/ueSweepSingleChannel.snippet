@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>ueSweepSingleChannel</Title>
+    <Author>20secondstosun</Author>
+    <Shortcut>ueSweepSingleChannel</Shortcut>
+    <Description>description</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <Default>value</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="cpp">
+    <![CDATA[
+ 	UWorld* const World = GetWorld();
+
+	if (World)
+	{
+		FVector StartLocation = FVector::ZeroVector;
+		FVector EndLocation = FVector::ZeroVector;
+		FHitResult HitResult;
+		FCollisionShape MyColSphere = FCollisionShape::MakeSphere(50.0f);
+
+		bool WasHit = GetWorld()->SweepSingleByChannel(HitResult, StartLocation, EndLocation, FQuat::Identity, ECC_WorldStatic, MyColSphere);
+
+		if (WasHit)
+		{
+
+		}
+	}
+]]>   
+    </Code>
+  </Snippet>
+</CodeSnippet>
