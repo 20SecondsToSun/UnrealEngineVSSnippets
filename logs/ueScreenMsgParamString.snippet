@@ -22,7 +22,7 @@
    if(GEngine)
    {
       FString x = "Some message";
-      GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Some variable values: x: %s"), x));
+      GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Some variable values: x: %s"), *x));
    }
   ]]>  
     </Code>
